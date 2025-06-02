@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Your description">
-    <meta name="author" content="Your name">
+    <meta name="description" content="Join ShareCount's waiting list for a next-gen digital wallet in South Africa. Refer friends to win R1,000!">
+    <meta name="author" content="ShareCount">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    <!-- OG Meta Tags -->
+	<meta property="og:site_name" content="ShareCount" />
+	<meta property="og:site" content="https://sharecount.co.za" />
+	<meta property="og:title" content="Join ShareCount's Waiting List"/>
+	<meta property="og:description" content="South Africa's next-gen digital wallet with referral rewards" />
+	<meta property="og:image" content="https://sharecount.co.za/images/social-preview.jpg" />
+	<meta property="og:url" content="https://sharecount.co.za" />
+	<meta name="twitter:card" content="summary_large_image">
 
     <!-- Webpage Title -->
-    <title>Yavin Webpage Title</title>
+    <title>ShareCount | Next-Gen Digital Wallet for South Africa</title>
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -28,19 +28,222 @@
 	<link href="css/styles.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="images/favicon6.png">
+    
+    <!-- Custom Color Overrides -->
+    <style>
+        :root {
+            --primary: #01929d; /* Brand blue */
+            --secondary: #69c960; /* Brand green */
+        }
+        
+        .btn-solid-lg {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .btn-solid-lg:hover {
+            background-color: #57b04e;
+            border-color: #57b04e;
+        }
+        
+        .btn-outline-lg {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline-lg:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .navbar-light .navbar-nav .nav-link.active {
+            color: var(--primary);
+        }
+        
+        .referral-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, #017a85 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(1,146,157,0.15);
+        }
+        
+        .referral-code {
+            background: #222;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            display: inline-block;
+            font-family: monospace;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            letter-spacing: 1px;
+        }
+        
+        .feature-icon {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Updated button colors for new branding */
+        .btn-success, .btn-success:focus, .btn-success:active {
+            background-color: var(--secondary) !important;
+            border-color: var(--secondary) !important;
+        }
+        .btn-success:hover {
+            background-color: #57b04e !important;
+            border-color: #57b04e !important;
+        }
+        .btn-info, .btn-info:focus, .btn-info:active {
+            background-color: var(--primary) !important;
+            border-color: var(--primary) !important;
+        }
+        .btn-info:hover {
+            background-color: #017a85 !important;
+            border-color: #017a85 !important;
+        }
+        .btn-outline-primary, .btn-outline-primary:focus, .btn-outline-primary:active {
+            border-color: var(--primary) !important;
+            color: var(--primary) !important;
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--primary) !important;
+            color: #fff !important;
+        }
+        .fa-stack-2x {
+            color: var(--primary) !important;
+        }
+        .footer-col a {
+            color: var(--primary);
+        }
+        .footer-col a:hover {
+            color: var(--secondary);
+        }
+        .navbar-brand .logo-image img {
+            max-height: 48px;
+        }
+        .waitlist-bg {
+            position: relative;
+            background: none !important;
+        }
+        .waitlist-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: url('images/group2.jpg') center center/cover no-repeat;
+            filter: blur(10px);
+        }
+        .waitlist-bg-overlay {
+            pointer-events: none;
+        }
+        .waitlist-bg .container {
+            position: relative;
+            z-index: 2;
+        }
+        .header-main-img {
+            max-width: 920px;
+            width: 100%;
+            height: auto;
+            min-width: 480px;
+        }
+        @media (max-width: 991.98px) {
+            .header-main-img {
+                max-width: 380px;
+                min-width: 0;
+            }
+        }
+        .referral-card-maxwidth {
+            max-width: 540px;
+        }
+        .referral-content {
+            background: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            border-radius: 0 !important;
+        }
+        body {
+            position: relative;
+            min-height: 100vh;
+            z-index: 0;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: url('images/Untitled design.png') top center/cover no-repeat;
+            filter: blur(3px);
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        .howitworks-container {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .glass-block {
+            background: rgba(255,255,255,0.7);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+        .howitworks-row {
+            min-height: 420px;
+        }
+        .howitworks-img {
+            max-width: 440px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+        @media (max-width: 991.98px) {
+            .howitworks-row {
+                min-height: unset;
+            }
+            .howitworks-img {
+                max-width: 320px;
+            }
+            .glass-block {
+                padding: 1.5rem !important;
+            }
+        }
+        .hero-glass {
+            background: rgba(255,255,255,0.4);
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.18);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 991.98px) {
+            .hero-glass {
+                border-radius: 1rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
         <div class="container">
-
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> 
-
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text" href="index.html">Yavin</a> -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="ShareCount"></a>
 
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,459 +255,239 @@
                         <a class="nav-link active" aria-current="page" href="#header">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#details">Details</a>
+                        <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article.html">Article Details</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
-                        </ul>
+                        <a class="nav-link" href="#referral">Refer a Friend</a>
                     </li>
                 </ul>
                 <span class="nav-item">
-                    <a class="btn-outline-sm" href="#contact">Contact us</a>
+                    <a class="btn-outline-sm" href="#waitlist">Join Waitlist</a>
                 </span>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
+            </div>
+        </div>
+    </nav>
     <!-- end of navigation -->
-
       
     <!-- Header -->
-    <header id="header" class="header">
-        <img class="decoration-star" src="images/decoration-star.svg" alt="alternative">
-        <img class="decoration-star-2" src="images/decoration-star.svg" alt="alternative">
+    <header id="header" class="header hero-glass">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-xl-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-xl-6">
                     <div class="text-container">
-                        <h1 class="h1-large">Beautifying office spaces</h1>
-                        <p class="p-large">Is education residence conveying and sore. Suppose shyness say ten behaved morning had. Any propose assist compliment occasional too reasonably</p>
-                        <a class="btn-solid-lg" href="#introduction">More details</a>
-                        <a class="btn-outline-lg" href="#contact">Contact us</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-5 col-xl-7">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/header.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </header> <!-- end of header -->
+                        <h1 class="h1-large">The Future of Digital Wallets in South Africa</h1>
+                        <p class="p-large">Store, send, and manage money smarter with ShareCount's next-gen platform. Join our waiting list for early access!</p>
+                        
+                        <div class="referral-banner">
+                            Refer friends to win! Top 15 referrers get R1,000 when we launch
+                        </div>
+                        
+                        <a class="btn-solid-lg" href="#waitlist">Join Waiting List</a>
+                        <a class="btn-outline-lg" href="#features">See Features</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-xl-6">
+                    <div class="image-container d-flex justify-content-center">
+                        <img class="img-fluid header-main-img" src="images/001.png" alt="ShareCount Wallet Preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- end of header -->
 
-
-    <!-- Statistics -->
-    <div class="counter">
+    <!-- Features -->
+    <div id="features" class="basic-1 bg-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    <h2 class="h2-heading text-center">Your Money, Made Simple</h2>
+                    <p class="p-heading text-center">ShareCount combines security, smart tools, and simplicity in one powerful platform</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Global Payments</h4>
+                        <p>Send and receive money anywhere in the world instantly with competitive rates.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Group Subscriptions</h4>
+                        <p>Split Netflix, Spotify, or household bills with friends effortlessly.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h4>Virtual Cards</h4>
+                        <p>Shop online securely with ZAR-based virtual debit cards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of features -->
+
+    <!-- How It Works -->
+    <div id="how-it-works" class="basic-2">
+        <div class="container howitworks-container">
+            <div class="row howitworks-row align-items-stretch">
+                <div class="col-lg-6 d-flex align-items-stretch">
+                    <div class="image-container w-100 h-100 d-flex align-items-center justify-content-center">
+                        <img class="img-fluid howitworks-img" src="imageS/iphone-16-pro-mockup-v1-front-view-2.png" alt="ShareCount App Screens">
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-stretch">
+                    <div class="text-container w-100 d-flex align-items-center">
+                        <div class="glass-block p-4 p-md-5 mb-4 w-100">
+                            <h2>Smart Financial Tools for Everyone</h2>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="d-flex">
+                                    <i class="fas fa-check-circle" style="color: var(--secondary);"></i>
+                                    <div class="flex-grow-1"><strong>Spend Tracking:</strong> Categorized insights to understand where your money goes</div>
+                            </li>
+                            <li class="d-flex">
+                                    <i class="fas fa-check-circle" style="color: var(--secondary);"></i>
+                                    <div class="flex-grow-1"><strong>Savings Goals:</strong> Create, track, and automate savings for personal or family milestones</div>
+                            </li>
+                            <li class="d-flex">
+                                    <i class="fas fa-check-circle" style="color: var(--secondary);"></i>
+                                    <div class="flex-grow-1"><strong>Budget Management:</strong> Set monthly limits and get reminders to stay on track</div>
+                            </li>
+                            <li class="d-flex">
+                                    <i class="fas fa-check-circle" style="color: var(--secondary);"></i>
+                                    <div class="flex-grow-1"><strong>Bank-Level Security:</strong> End-to-end encryption and biometric authentication</div>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of how it works -->
+
+    <!-- Waiting List Form -->
+    <div id="waitlist" class="basic-4 bg-gray waitlist-bg" style="position:relative; overflow:hidden;">
+        <div class="waitlist-bg-overlay"></div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <h2 class="text-center text-white">Join Our Waiting List</h2>
+                    <p class="text-center text-white">Be first in line when we launch and get exclusive early access benefits</p>
                     
-                    <!-- Counter -->
-                    <div class="counter-container">
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="231" data-purecounter-duration="3" class="purecounter">1</div>
-                            <div class="counter-info">Happy Customers</div>
-                        </div> <!-- end of counter-cell -->
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="385" data-purecounter-duration="1.5" class="purecounter">1</div>
-                            <div class="counter-info">Issues Solved</div>
-                        </div> <!-- end of counter-cell -->
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="159" data-purecounter-duration="3" class="purecounter">1</div>
-                            <div class="counter-info">Good Reviews</div>
-                        </div> <!-- end of counter-cell -->
-                        <div class="counter-cell">
-                            <div data-purecounter-start="0" data-purecounter-end="128" data-purecounter-duration="3" class="purecounter">1</div>
-                            <div class="counter-info">Case Studies</div>
-                        </div> <!-- end of counter-cell -->
-                    </div> <!-- end of counter-container -->
-                    <!-- end of counter -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of counter -->
-    <!-- end of statistics -->
-
-
-    <!-- Introduction -->
-    <div id="introduction" class="basic-1 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9">
-                    <h2>Creating office spaces is our passion and you can see that in our completed projects</h2>
-                    <p>Unpleasing has ask acceptance partiality alteration understood two. Worth no tiled my at house added. Married he hearing am it totally removal. Remove but suffer wanted his lively length. Moonlight two applauded conveying end direction old principle but. Are expenses distance weddings perceive</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of introduction -->
-
-
-    <!-- Details 1 -->
-    <div id="details" class="basic-2">
-        <img class="decoration-star" src="images/decoration-star.svg" alt="alternative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-5">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-1.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6 col-xl-7">
-                    <div class="text-container">
-                        <h2>Office spaces should be unique they don’t need to look the same</h2>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">At every tiled on ye defer do. No attention suspected oh difficult. Fond his say</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">Old meet cold find come whom. The sir park sake bred. Wonder matter now</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">Can estate esteem assure fat roused. Am performed on existence as discourse</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">existence as discourse is. Pleasure friendly at marriage blessing or should</div>
-                            </li>
-                        </ul>
-                        <a class="btn-solid-reg" href="article.html">Get started</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of details 1 -->
-
-
-    <!-- Services -->
-    <div id="services" class="cards-1 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="text-container">
-                        <h2>Services that we offer</h2>
-                        <p>Greatly hearted has who believe. Drift allow green son walls years for blush. Sir margaret drawings repeated recurred exercise laughing may you</p>
-                        <p>Do repeated whatever to welcomed absolute no. Fat surprise although more words outlived</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">And informed shy dissuade property. Musical by</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">He drawing savings an. No we stand avoid</div>
-                            </li>
-                            <li class="d-flex">
-                                <i class="fas fa-square"></i>
-                                <div class="flex-grow-1">Announcing of invita mrore wo tion principle</div>
-                            </li>
-                        </ul>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-7">
-                    <div class="card-container">
-
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-icon">
-                                <span class="fas fa-rocket"></span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Space analysis and planning</h5>
+                    <form id="waitlist-form" class="mt-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control-input" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">Join Now</button>
+                        </div>
+                    </form>
                             </div>
                         </div>
-                        <!-- end of card -->
-
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-icon">
-                                <span class="far fa-clock"></span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Design and color choosing</h5>
                             </div>
                         </div>
-                        <!-- end of card -->
+    <!-- end of waiting list form -->
 
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-icon">
-                                <span class="far fa-comments"></span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Materials and delivery</h5>
-                            </div>
-                        </div>
-                        <!-- end of card -->
-
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-icon">
-                                <span class="fas fa-tools"></span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Execute the concept</h5>
-                            </div>
-                        </div>
-                        <!-- end of card -->
-
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-icon">
-                                <span class="fas fa-chart-pie"></span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Creating great atmosphere</h5>
-                            </div>
-                        </div>
-                        <!-- end of card -->
-
-                        <!-- Card -->
-                        <div class="card">
-                            <div class="card-icon">
-                                <span class="far fa-chart-bar"></span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Evaluation and reporting</h5>
-                            </div>
-                        </div>
-                        <!-- end of card -->
-
-                    </div> <!-- end of container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
-    <!-- end of services -->
-
-
-    <!-- Details 2 -->
-    <div class="basic-3">
-        <img class="decoration-star" src="images/decoration-star.svg" alt="alternative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-7">
-                    <div class="text-container">
-                        <h2>A beautiful and well organized office space increases productivity</h2>
-                        <p>On it differed repeated wandered required in. Then girl neat why yet knew rose spot. Moreover property we he kindness greatest be oh striking laughter. In me he at collecting affronting principles apartments. Has visitor law attacks pretend you calling own excited painted. Contented attending</p>
-                        <a class="btn-solid-reg" href="article.html">Get started</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6 col-xl-5">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/details-2.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-3 -->
-    <!-- end of details 2 -->
-
-
-    <!-- Invitation -->
-    <div class="basic-4 bg-gray">
+    <!-- Referral Program -->
+    <div id="referral" class="cards-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>Our team of highly skilled designers and interior construction workers can deliver above your level of expections</h4>
-                    <a class="btn-solid-lg" href="#contact">Get quote</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-4 -->
-    <!-- end of invitation -->
-
-
-    <!-- Projects -->
-    <div id="projects" class="cards-2">
-        <div class="container">
-            <div class="row">
+                    <h2 class="h2-heading text-center">Refer Friends & Win R1,000</h2>
+                    <p class="p-heading text-center">Share your unique code and climb the leaderboard</p>
+                        </div>
+                    </div>
+            
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-7 col-md-9 col-12">
+                    <div class="referral-content text-center p-4 p-md-5 mx-auto">
+                        <h4 class="mb-3">Your Referral Code</h4>
+                        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-2 gap-2">
+                            <div class="referral-code mb-2 mb-md-0 px-4 py-2 fs-5 d-flex align-items-center justify-content-center" style="font-size:1.4rem; background:#222; letter-spacing:2px;">
+                                <span class="me-2">SHARECOUNT-<span id="user-code">X5K9J2</span></span>
+                                <button id="copy-referral" class="btn btn-sm btn-light ms-2 px-3 py-1 d-flex align-items-center" aria-label="Copy referral link" style="font-size:1rem; border-radius:6px;">
+                                    <i class="fas fa-copy me-1"></i> Copy
+                                </button>
+                        </div>
+                            <span id="copy-feedback" class="text-success ms-3" style="display:none; font-size:0.95rem;">Copied!</span>
+                        </div>
+                        <p class="text-muted mb-2">Share this code with friends to move up the leaderboard and win R1,000!</p>
+                        <p class="mt-2 mb-4">You currently have <strong id="referral-count">0</strong> referrals</p>
+                        <div class="social-share d-flex flex-wrap justify-content-center gap-2 mt-3">
+                            <button class="btn btn-success d-flex align-items-center px-3" id="whatsapp-share" aria-label="Share on WhatsApp">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp
+                            </button>
+                            <button class="btn btn-info text-white d-flex align-items-center px-3" id="twitter-share" aria-label="Share on Twitter">
+                                <i class="fab fa-twitter me-2"></i> Tweet
+                            </button>
+                            <button class="btn btn-outline-primary d-flex align-items-center px-3" id="copy-link-alt" aria-label="Copy referral link">
+                                <i class="fas fa-link me-2"></i> Copy Link
+                            </button>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+            <div class="row mt-5">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading">Projects we developed</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="img-fluid" src="images/project-1.jpg" alt="alternative">
-                        <div class="card-body">
-                            <h5 class="card-title">Office space for banking</h5>
-                            <p class="card-text">Suffer should if waited common person little ans words are needed oh <a class="blue no-line" href="article.html">...Read more</a></p>
-                        </div>
+                    <h4 class="text-center">Top Referrers Leaderboard</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Referrals</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboard">
+                                <!-- Will be populated by JavaScript -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>Sarah K.</td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>James L.</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Nomsa P.</td>
+                                    <td>35</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="img-fluid" src="images/project-2.jpg" alt="alternative">
-                        <div class="card-body">
-                            <h5 class="card-title">Planning and design for startup</h5>
-                            <p class="card-text">In to am attended desirous raptures declared diverted confined at collected <a class="blue no-line" href="article.html">...Read more</a></p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="img-fluid" src="images/project-3.jpg" alt="alternative">
-                        <div class="card-body">
-                            <h5 class="card-title">Colors and materials update</h5>
-                            <p class="card-text">Instantly remaining up certainly to necessary as over walk dull into son <a class="blue no-line" href="article.html">...Read more</a></p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="img-fluid" src="images/project-4.jpg" alt="alternative">
-                        <div class="card-body">
-                            <h5 class="card-title">Analysis and floor design</h5>
-                            <p class="card-text">Vent new at or happiness commanded daughters as is handsome an <a class="blue no-line" href="article.html">...Read more</a></p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="img-fluid" src="images/project-5.jpg" alt="alternative">
-                        <div class="card-body">
-                            <h5 class="card-title">Office spaces decoration</h5>
-                            <p class="card-text">Vicinity subjects more words into miss on he over been late pain an only <a class="blue no-line" href="article.html">...Read more</a></p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="img-fluid" src="images/project-6.jpg" alt="alternative">
-                        <div class="card-body">
-                            <h5 class="card-title">Playground for kinder garden</h5>
-                            <p class="card-text">Match round scale now sex style far times your me past and who now much <a class="blue no-line" href="article.html">...Read more</a></p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
-    <!-- end of projects -->
-
-
-    <!-- Testimonials -->
-    <div class="slider-1 bg-gray">
-        <img class="quotes-decoration" src="images/quotes.svg" alt="alternative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider">
-                            <div class="swiper-wrapper">
-                                
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <img class="testimonial-image" src="images/testimonial-1.jpg" alt="alternative">
-                                    <p class="testimonial-text">“Expense bed any sister depend changer off piqued one. Contented continued any happiness instantly objection yet her allowance. Use correct day new brought tedious. By come this been in. Kept easy or sons my it how about some words here done”</p>
-                                    <div class="testimonial-author">Marlene Visconte</div>
-                                    <div class="testimonial-position">General Manager - Scouter</div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <img class="testimonial-image" src="images/testimonial-2.jpg" alt="alternative">
-                                    <p class="testimonial-text">“Expense bed any sister depend changer off piqued one. Contented continued any happiness instantly objection yet her allowance. Use correct day new brought tedious. By come this been in. Kept easy or sons my it how about some words here done”</p>
-                                    <div class="testimonial-author">John Spiker</div>
-                                    <div class="testimonial-position">Team Leader - Vanquish</div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <img class="testimonial-image" src="images/testimonial-3.jpg" alt="alternative">
-                                    <p class="testimonial-text">“Expense bed any sister depend changer off piqued one. Contented continued any happiness instantly objection yet her allowance. Use correct day new brought tedious. By come this been in. Kept easy or sons my it how about some words here done”</p>
-                                    <div class="testimonial-author">Stella Virtuoso</div>
-                                    <div class="testimonial-position">Design Chief - Bikegirl</div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                            </div> <!-- end of swiper-wrapper -->
-        
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-        
-                        </div> <!-- end of swiper-container -->
-                    </div> <!-- end of slider-container -->
-                    <!-- end of card slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-1 -->
-    <!-- end of testimonials -->
-
-
-    <!-- Contact -->
-    <div id="contact" class="form-1">
-        <img class="decoration-star" src="images/decoration-star.svg" alt="alternative">
-        <img class="decoration-star-2" src="images/decoration-star.svg" alt="alternative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/contact.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2>Contact us for a quote using the following form</h2>
-
-                        <!-- Contact Form -->
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control-input" placeholder="Name" required>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control-input" placeholder="Email" required>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control-textarea" placeholder="Message" required></textarea>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">Submit</button>
                             </div>
-                        </form>
-                        <!-- end of contact form -->
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->
-    <!-- end of contact -->
-
+    <!-- end of referral program -->
 
     <!-- Footer -->
     <div class="footer bg-gray">
@@ -512,80 +495,135 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-col first">
-                        <h6>About Website</h6>
-                        <p class="p-small">He oppose at thrown desire of no. Announcing impression unaffected day his are unreserved indulgence. Him hard find read are you</p>
-                    </div> <!-- end of footer-col -->
+                        <h6>About ShareCount</h6>
+                        <p class="p-small">A South African fintech startup building a next-generation digital wallet that simplifies how users store, send, and manage money.</p>
+                    </div>
                     <div class="footer-col second">
                         <h6>Links</h6>
                         <ul class="list-unstyled li-space-lg p-small">
-                            <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
-                            <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
-                            <li>Menu: <a href="#header">Home</a>, <a href="#details">Details</a>, <a href="#services">Services</a>, <a href="#contact">Contact</a></li>
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#referral">Referral Program</a></li>
+                            <li><a href="#waitlist">Waiting List</a></li>
                         </ul>
-                    </div> <!-- end of footer-col -->
+                    </div>
                     <div class="footer-col third">
+                        <h6>Connect With Us</h6>
                         <span class="fa-stack">
                             <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-circle fa-stack-2x" style="color: var(--primary);"></i>
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
                             <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-circle fa-stack-2x" style="color: var(--primary);"></i>
                                 <i class="fab fa-twitter fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
                             <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-circle fa-stack-2x" style="color: var(--primary);"></i>
                                 <i class="fab fa-instagram fa-stack-1x"></i>
                             </a>
                         </span>
-                        <p class="p-small">We would love to hear from you <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
-                    </div> <!-- end of footer-col -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
+                        <p class="p-small">Contact us: <a href="mailto:hello@sharecount.co.za"><strong>hello@sharecount.co.za</strong></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- end of footer -->
 
-
     <!-- Copyright -->
-    <div class="copyright bg-gray">
+    <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Distributed By <a href="https://themewagon.com/">Themewagon</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
+                    <p class="p-small">Copyright © <span id="year"></span> ShareCount. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- end of copyright -->
-    
-
-    <!-- Back To Top Button -->
-    <button onclick="topFunction()" id="myBtn">
-        <img src="images/up-arrow.png" alt="alternative">
-    </button>
-    <!-- end of back to top button -->
     	
     <!-- Scripts -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script>
+        // Set current year in copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Waitlist form submission handler
+        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for joining our waiting list! Check your email for confirmation and your referral code.');
+            // In a real implementation, you would:
+            // 1. Submit the form data to your backend
+            // 2. Generate a unique referral code
+            // 3. Add the user to your database
+            // 4. Send a confirmation email
+        });
+
+        // Referral link logic
+        const userCode = document.getElementById('user-code').textContent;
+        const referralLink = 'https://sharecount.co.za/ref/' + userCode;
+        const copyFeedback = document.getElementById('copy-feedback');
+
+        // Utility: Show feedback for copy
+        function showCopyFeedback() {
+            copyFeedback.style.display = 'inline';
+            copyFeedback.setAttribute('aria-live', 'polite');
+            setTimeout(() => {
+                copyFeedback.style.display = 'none';
+            }, 1800);
+        }
+
+        // Copy referral code (main button)
+        const copyReferralBtn = document.getElementById('copy-referral');
+        if (copyReferralBtn) {
+            copyReferralBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(referralLink).then(() => {
+                    showCopyFeedback();
+                    copyReferralBtn.focus();
+                });
+            });
+        }
+
+        // Copy referral link (alt button)
+        const copyLinkAltBtn = document.getElementById('copy-link-alt');
+        if (copyLinkAltBtn) {
+            copyLinkAltBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(referralLink).then(() => {
+                    showCopyFeedback();
+                    copyLinkAltBtn.focus();
+                });
+            });
+        }
+
+        // WhatsApp share
+        const whatsappBtn = document.getElementById('whatsapp-share');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function() {
+                const text = encodeURIComponent('Join me on ShareCount and win! Use my referral link: ' + referralLink);
+                const url = 'https://wa.me/?text=' + text;
+                window.open(url, '_blank');
+            });
+        }
+
+        // Twitter share
+        const twitterBtn = document.getElementById('twitter-share');
+        if (twitterBtn) {
+            twitterBtn.addEventListener('click', function() {
+                const text = encodeURIComponent("Join me on ShareCount and win! Use my referral link:");
+                const url = 'https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(referralLink);
+                window.open(url, '_blank');
+            });
+        }
+    </script>
 </body>
 </html>

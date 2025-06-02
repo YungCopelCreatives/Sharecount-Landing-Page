@@ -1,39 +1,3 @@
-/* Description: Master CSS file */
-
-/*****************************************
-Table Of Contents:
-- General Styles
-- Navigation
-- Header
-- Statistics
-- Introduction
-- Details 1
-- Services
-- Details 2
-- Invitation
-- Projects
-- Testimonials
-- Contact
-- Footer
-- Copyright
-- Back To Top Button
-- Extra Pages
-- Media Queries
-******************************************/
-
-/*****************************************
-Colors:
-- Backgrounds - light gray #f9fafe
-- Headings text - black #191e47
-- Body text - dark gray #6c717b
-- Buttons, icons - blue #4555d2
-- Buttons, icons, bullets - red #cc2973
-******************************************/
-
-
-/**************************/
-/*     General Styles     */
-/**************************/
 body,
 html {
     width: 100%;
@@ -163,9 +127,9 @@ a:hover {
 .btn-solid-lg {
 	display: inline-block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-	border: 1px solid #4555d2;
+	border: 1px solid #1368ae;
 	border-radius: 30px;
-	background-color: #4555d2;
+	background-color: #1368ae;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -176,17 +140,17 @@ a:hover {
 
 .btn-solid-lg:hover {
 	background-color: transparent;
-	color: #4555d2; /* needs to stay here because of the color property of a tag */
+	color: #1368ae; /* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
 .btn-outline-reg {
 	display: inline-block;
 	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
-	border: 1px solid #cc2973;
+	border: 1px solid #1368ae;
 	border-radius: 30px;
 	background-color: transparent;
-	color: #cc2973;
+	color: #1368ae;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0;
@@ -203,10 +167,10 @@ a:hover {
 .btn-outline-lg {
 	display: inline-block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-	border: 1px solid #cc2973;
+	border: 1px solid #1368ae;
 	border-radius: 30px;
 	background-color: transparent;
-	color: #cc2973;
+	color: #1368ae;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0;
@@ -223,10 +187,10 @@ a:hover {
 .btn-outline-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
-	border: 1px solid #cc2973;
+	border: 1px solid #1368ae;
 	border-radius: 30px;
 	background-color: transparent;
-	color: #cc2973;
+	color: #1368ae;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0;
@@ -279,9 +243,9 @@ a:hover {
 	display: inline-block;
 	width: 100%;
 	height: 3.25rem;
-	border: 1px solid #4555d2;
+	border: 1px solid #1368ae;
 	border-radius: 30px;
-	background-color: #4555d2;
+	background-color: #1368ae;
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -291,9 +255,9 @@ a:hover {
 }
 
 .form-control-submit-button:hover {
-	border: 1px solid #4555d2;
+	border: 1px solid #1ec784;
 	background-color: transparent;
-	color: #4555d2;
+	color: #1368ae;
 }
 
 
