@@ -49,7 +49,6 @@ function toggleDropdown(e) {
 	);
 }
 
-// On hover
 const dropdownCheck = document.querySelector('.dropdown');
 
 if (dropdownCheck !== null) { 
