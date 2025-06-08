@@ -263,6 +263,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#referral">Refer a Friend</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy.html">Privacy Policy</a>
+                    </li>
                 </ul>
                 <span class="nav-item">
                     <a class="btn-outline-sm" href="#waitlist">Join Waitlist</a>
@@ -506,6 +509,7 @@
                             <li><a href="#how-it-works">How It Works</a></li>
                             <li><a href="#referral">Referral Program</a></li>
                             <li><a href="#waitlist">Waiting List</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-col third">
@@ -553,77 +557,103 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/scripts.js"></script>
     
-    <!-- Custom Scripts -->
+    <!-- Dynamic Referral & Leaderboard Logic -->
     <script>
-        // Set current year in copyright
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // Replace with your actual deployed Google Apps Script URL
+        const scriptURL = 'https://script.google.com/macros/s/YOUR_DEPLOYED_SCRIPT_ID/exec'; // <-- PLACEHOLDER: Update this
 
-        // Waitlist form submission handler
-        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for joining our waiting list! Check your email for confirmation and your referral code.');
-            // In a real implementation, you would:
-            // 1. Submit the form data to your backend
-            // 2. Generate a unique referral code
-            // 3. Add the user to your database
-            // 4. Send a confirmation email
-        });
-
-        // Referral link logic
-        const userCode = document.getElementById('user-code').textContent;
-        const referralLink = 'https://sharecount.co.za/ref/' + userCode;
-        const copyFeedback = document.getElementById('copy-feedback');
-
-        // Utility: Show feedback for copy
+        // Utility to show 'Copied!' feedback on any button
         function showCopyFeedback() {
+            const copyFeedback = document.getElementById('copy-feedback');
             copyFeedback.style.display = 'inline';
-            copyFeedback.setAttribute('aria-live', 'polite');
             setTimeout(() => {
                 copyFeedback.style.display = 'none';
             }, 1800);
         }
 
-        // Copy referral code (main button)
-        const copyReferralBtn = document.getElementById('copy-referral');
-        if (copyReferralBtn) {
-            copyReferralBtn.addEventListener('click', function() {
-                navigator.clipboard.writeText(referralLink).then(() => {
-                    showCopyFeedback();
-                    copyReferralBtn.focus();
+        // Fetch the user's IP address
+        fetch('https://ipapi.co/json')
+        .then(response => response.json())
+        .then(data => {
+            const userIP = data.ip;
+
+            // STEP 1: Load user's referral code and count from Google Sheets
+            fetch(`${scriptURL}?ip=${userIP}`)
+                .then(res => res.json())
+                .then(result => {
+                    // Inject referral code and count into HTML
+                    document.getElementById("user-code").textContent = result.code; // <-- PLACEHOLDER: dynamic code
+                    document.getElementById("referral-count").textContent = result.count; // <-- PLACEHOLDER: dynamic count
+
+                    // Setup referral link
+                    const referralLink = `https://sharecount.co.za?ref=${result.code}`; // <-- PLACEHOLDER: your domain base URL
+
+                    // Handle Copy Referral (main)
+                    document.getElementById('copy-referral').addEventListener('click', function () {
+                        navigator.clipboard.writeText(referralLink).then(() => {
+                            showCopyFeedback();
+                        });
+                    });
+
+                    // Handle Copy Referral (alt)
+                    document.getElementById('copy-link-alt').addEventListener('click', function () {
+                        navigator.clipboard.writeText(referralLink).then(() => {
+                            showCopyFeedback();
+                        });
+                    });
+
+                    // WhatsApp share
+                    document.getElementById('whatsapp-share').addEventListener('click', function () {
+                        const text = encodeURIComponent(`Join me on ShareCount and win! Use my referral link: ${referralLink}`);
+                        window.open(`https://wa.me/?text=${text}`, '_blank');
+                    });
+
+                    // Twitter share
+                    document.getElementById('twitter-share').addEventListener('click', function () {
+                        const text = encodeURIComponent("Join me on ShareCount and win!");
+                        const url = `https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(referralLink)}`;
+                        window.open(url, '_blank');
+                    });
                 });
-            });
-        }
 
-        // Copy referral link (alt button)
-        const copyLinkAltBtn = document.getElementById('copy-link-alt');
-        if (copyLinkAltBtn) {
-            copyLinkAltBtn.addEventListener('click', function() {
-                navigator.clipboard.writeText(referralLink).then(() => {
-                    showCopyFeedback();
-                    copyLinkAltBtn.focus();
+            // STEP 2: Check if current visitor came via referral link
+            const params = new URLSearchParams(window.location.search);
+            const referralCode = params.get('ref'); // <-- PLACEHOLDER: captured from ?ref=XXXX
+
+            if (referralCode) {
+                // Notify backend this IP visited using someone's code
+                fetch(`${scriptURL}?referral=${referralCode}&ip=${userIP}`)
+                    .then(() => {
+                        // Referral registered in background
+                        console.log("Referral credited");
+                    });
+            }
+
+            // STEP 3: Populate leaderboard
+            fetch(`${scriptURL}?action=leaderboard`)
+                .then(res => res.json())
+                .then(data => {
+                    const tbody = document.getElementById("leaderboard");
+                    tbody.innerHTML = ""; // Clear placeholder rows
+
+                    data.forEach((entry, i) => {
+                        tbody.innerHTML += `
+                            <tr>
+                                <td>${i + 1}</td>
+                                <td>${entry.name}</td>
+                                <td>${entry.count}</td>
+                            </tr>
+                        `;
+                    });
                 });
-            });
-        }
+        });
 
-        // WhatsApp share
-        const whatsappBtn = document.getElementById('whatsapp-share');
-        if (whatsappBtn) {
-            whatsappBtn.addEventListener('click', function() {
-                const text = encodeURIComponent('Join me on ShareCount and win! Use my referral link: ' + referralLink);
-                const url = 'https://wa.me/?text=' + text;
-                window.open(url, '_blank');
-            });
-        }
-
-        // Twitter share
-        const twitterBtn = document.getElementById('twitter-share');
-        if (twitterBtn) {
-            twitterBtn.addEventListener('click', function() {
-                const text = encodeURIComponent("Join me on ShareCount and win! Use my referral link:");
-                const url = 'https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(referralLink);
-                window.open(url, '_blank');
-            });
-        }
+        // Appreciation message on waitlist form submit
+        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for joining our waiting list! Check your email for confirmation and your referral code.');
+            // Optionally, you can add logic here to send the form data to your backend
+        });
     </script>
 </body>
 </html>
